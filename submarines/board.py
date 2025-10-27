@@ -18,3 +18,12 @@ def create_bool_matrix(size: int, fill: bool = False):
         mat.append(lst)
     return mat
 
+
+def in_bounds(size: int, x: int, y: int):
+    if x <= size:
+        return True
+    if y <= size:
+        return True
+    else:
+        return False
+
