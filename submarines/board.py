@@ -62,3 +62,15 @@ def render_public(ships: list[list[int]], shots: list[list[bool]]) -> str:
 
 
 
+def render_public(ships: list[list[int]], shots: list[list[bool]]) -> str:
+    reveal_game = ""
+    for i in range(len(ships)):
+        for j in range(len(ships)):
+            if ships[j][i] and shots[j][i]:
+                reveal_game += "V"
+            elif not ships[j][i] and shots[j][i]:
+                reveal_game += "X"
+            elif not ships[j][i] and not shots[j][i]:
+                reveal_game += "O"
+    return reveal_game
+
