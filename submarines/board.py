@@ -27,6 +27,19 @@ def count_remaining_ships(ships: list[list[int]], shots: list[list[bool]]) -> in
             if ships and not shots :
                 count += 1
     return count
+def render_public(ships: list[list[int]], shots: list[list[bool]]) -> str:
+    reveal_game = ""
+    for i in range(len(ships)):
+        for j in range(len(ships)):
+            if ships[i][j] and shots[i][j]:
+                reveal_game += "V"
+            elif not ships[i][j] and shots[i][j]:
+                reveal_game += "X"
+            else:
+                reveal_game += "O"
+        reveal_game += "\n"
+    return reveal_game
+
 
 
 
