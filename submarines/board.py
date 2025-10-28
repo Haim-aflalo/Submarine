@@ -17,10 +17,8 @@ def create_bool_matrix(size: int, fill: bool = False):
     return mat
 
 def in_bounds(size: int, x: int, y: int):
-    if x <= size >= y:
-        return True
-    else:
-        return False
+    return x <= size >= y
+
 
 def count_remaining_ships(ships: list[list[int]], shots: list[list[bool]]) -> int:
     count = 0
@@ -29,4 +27,25 @@ def count_remaining_ships(ships: list[list[int]], shots: list[list[bool]]) -> in
             if ships and not shots :
                 count += 1
     return count
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
